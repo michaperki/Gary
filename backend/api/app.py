@@ -118,3 +118,6 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
     
     logger.info("Application initialized")
     return app
+
+
+app = create_app()
