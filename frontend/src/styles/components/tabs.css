@@ -1,0 +1,73 @@
+/* src/styles/components/tabs.css - Enhanced tab navigation styling */
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: var(--transition);
+  position: relative;
+  font-size: 1rem;
+}
+
+.tab:hover {
+  color: var(--primary-color);
+  background-color: rgba(44, 107, 172, 0.05);
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Add subtle indicator for clickability */
+.tab:not(.active)::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e2e8f0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tab:not(.active):hover::before {
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tabs {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+}
