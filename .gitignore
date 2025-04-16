@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# C extensions
+*.c
+*.cpp
+*.h
+
+# Virtual environment
+venv/
+.venv/
+env/
+envs/
+*/bin/activate
+*/Scripts/activate
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+*.ipr
+*.iws
+
+# OS-specific files
+.DS_Store
+
+# Log files
+*.log
+
+# Data files (if you don't want to track them)
+# data/
+
+# Environment configuration (if you have a .env file)
+.env
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Packages
+node_modules/
+
+# Other
+.pytest_cache/
+coverage/
+.coverage
+htmlcov/
+.tox/
+build/
+dist/
+*.egg-info/
